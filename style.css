@@ -1,0 +1,41 @@
+body {
+  font-family: 'Roboto Mono', monospace;
+  background: #f0f0f0;
+  direction: rtl;
+  text-align: center;
+  color: #333;
+}
+
+.container {
+  width: 480px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  border-top: 5px solid #ff6600;
+}
+
+h1 {
+  color: #ff6600;
+  font-size: 28px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.section {
+  margin: 20px 0;
+}
+
+#matrixInputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ردیف ماتریس */
+.matrix-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px; }

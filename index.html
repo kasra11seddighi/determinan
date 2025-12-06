@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>محاسبه دترمینان ماتریس</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>محاسبه دترمینان ماتریس</h1>
+
+  <div class="container">
+
+    <!-- انتخاب اندازه ماتریس -->
+    <div class="section">
+      <label>اندازه ماتریس را انتخاب کنید:</label>
+      <select id="matrixSize">
+        <option value="1">1 × 1</option>
+        <option value="2">2 × 2</option>
+        <option value="3">3 × 3</option>
+        <option value="4">4 × 4</option>
+      </select>
+      <button id="generate">ساخت ماتریس</button>
+    </div>
+
+    <!-- ورودی ماتریس -->
+    <div class="section">
+      <h3>درایه‌ها</h3>
+      <div id="matrixInputs"></div>
+    </div>
+
+    <!-- محاسبه -->
+    <div class="section">
+      <button id="calcBtn">محاسبه دترمینان</button>
+      <p id="result">نتیجه: —</p>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
