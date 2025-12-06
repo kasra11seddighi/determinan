@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <title>محاسبه دترمینان ماتریس</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ماشین حساب ماتریس sci-fi</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <h1>محاسبه دترمینان ماتریس</h1>
-
-  <div class="container">
-
-    <!-- انتخاب اندازه ماتریس -->
-    <div class="section">
-      <label>اندازه ماتریس را انتخاب کنید:</label>
-      <select id="matrixSize">
-        <option value="1">1 × 1</option>
-        <option value="2">2 × 2</option>
-        <option value="3">3 × 3</option>
-        <option value="4">4 × 4</option>
-      </select>
-      <button id="generate">ساخت ماتریس</button>
+<div class="container">
+  <h1>ماشین حساب ماتریس</h1>
+  
+  <div class="section">
+    <div class="matrix-size">
+      <h3>اندازه ماتریس A</h3>
+      <label>ردیف:
+        <input type="number" id="rowsA" min="1" max="5" value="2">
+      </label>
+      <label>ستون:
+        <input type="number" id="colsA" min="1" max="5" value="2">
+      </label>
     </div>
-
-    <!-- ورودی ماتریس -->
-    <div class="section">
-      <h3>درایه‌ها</h3>
-      <div id="matrixInputs"></div>
+    <div class="matrix-size">
+      <h3>اندازه ماتریس B</h3>
+      <label>ردیف:
+        <input type="number" id="rowsB" min="1" max="5" value="2">
+      </label>
+      <label>ستون:
+        <input type="number" id="colsB" min="1" max="5" value="2">
+      </label>
     </div>
-
-    <!-- محاسبه -->
-    <div class="section">
-      <button id="calcBtn">محاسبه دترمینان</button>
-      <p id="result">نتیجه: —</p>
-    </div>
-
+    <button id="generate">ساخت ماتریس‌ها</button>
   </div>
 
-  <script src="app.js"></script>
+  <div id="matricesContainer" class="section">
+    <div class="matrix-box">
+      <h3>ماتریس A</h3>
+      <div id="matrixA"></div>
+    </div>
+    <div class="matrix-box">
+      <h3>ماتریس B</h3>
+      <div id="matrixB"></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <button id="addBtn">جمع (+)</button>
+    <button id="subBtn">تفریق (−)</button>
+    <button id="mulBtn">ضرب (×)</button>
+    <button id="detBtn">دترمینان A</button>
+  </div>
+
+  <div id="result" class="section">نتیجه: </div>
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>
+
 

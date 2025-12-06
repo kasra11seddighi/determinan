@@ -1,41 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Roboto Mono', monospace;
-  background: #f0f0f0;
+  font-family: 'Share Tech Mono', monospace;
+  margin: 0;
+  padding: 0;
   direction: rtl;
   text-align: center;
-  color: #333;
+  background: linear-gradient(135deg, #0a0a1f, #1a1a2e);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
 }
 
 .container {
-  width: 480px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  border-top: 5px solid #ff6600;
+  width: 95%;
+  max-width: 720px;
+  background: rgba(10,10,30,0.95);
+  padding: 20px;
+  border-radius: 16px;
+  border: 2px solid #ff6600;
+  box-shadow: 0 0 40px rgba(255,102,0,0.6);
 }
 
 h1 {
-  color: #ff6600;
+  color: #ff9900;
   font-size: 28px;
   margin-bottom: 20px;
-  letter-spacing: 1px;
+  text-shadow: 0 0 12px #ff9900;
 }
 
 .section {
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
-#matrixInputs {
+label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+input[type=number] {
+  width: 60px;
+  padding: 6px;
+  border-radius: 6px;
+  border: 2px solid #ff6600;
+  text-align: center;
+  font-size: 16px;
+  background: rgba(30,30,60,0.85);
+  color: #fff;
+}
+
+button {
+  background: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 0 15px #ff6600;
+  transition: 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background: #ff9933;
+  box-shadow: 0 0 25px #ffcc33, 0 0 50px #ff9900 inset;
+}
+
+#matricesContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* ردیف ماتریس */
+.matrix-box {
+  flex: 1 1 250px;
+  min-width: 220px;
+}
+
 .matrix-row {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 12px; }
+  gap: 8px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.matrix-input {
+  width: 50px;
+  height: 50px;
+  padding: 6px;
+  border: 2px solid #ff6600;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  background: rgba(30,30,60,0.85);
+  color: #fff;
+  box-shadow: 0 0 10px #ff6600;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s, box-shadow 0.5s;
+}
+
+.matrix-input:hover {
+  box-shadow: 0 0 18px #ffcc33, 0 0 40px #ff9900 inset;
+}
+
+.matrix-input:focus {
+  outline: none;
+  border-color: #ffcc33;
+  box-shadow: 0 0 25px #ffcc33, 0 0 50px #ff9900 inset;
+}
+
+#result {
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 20px;
+  color: #ffcc33;
+  text-shadow: 0 0 6px #ffcc33;
+}
+
+/* سلول نتیجه */
+.result-cell {
+  background: rgba(255,102,0,0.2);
+  border: 2px solid #ff6600;
+  color: #ffcc33;
+  font-weight: bold;
+  box-shadow: 0 0 12px #ff9900;
+  transition: 0.3s;
+}
+
+.result-cell:hover {
+  box-shadow: 0 0 18px #ffcc33, 0 0 40px #ff9900 inset;
+}
+
+/* ریسپانسیو */
+@media (max-width: 600px) {
+  #matricesContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
